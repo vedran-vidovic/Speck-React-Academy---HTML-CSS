@@ -1,12 +1,7 @@
-header {
-  background-color: white;
-  height: 80px;
-  width: 100%;
+body {
+  font-family: "Lato", sans-serif;
 }
-img {
-  width: 100px;
-  float: left;
-}
+
 ul {
   list-style: none;
   padding: 0;
@@ -18,13 +13,14 @@ ul {
 li p {
   float: right;
   display: block;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease-out;
 }
 
 li p:hover {
-  background-color: #fff;
+  color: #c59613;
 }
 
 p {
@@ -32,23 +28,63 @@ p {
   font-weight: bold;
 }
 
+.header-main {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.logo-image img {
+  width: 80px;
+  height: 50px;
+  float: left;
+}
+
 .hero-section {
-  background-image: url("./images/event.jpg");
+  /*filling the section with the desired image*/
+  background: url("./images/event.jpg") rgba(0, 0, 0, 0.69);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-
-  width: 100%;
-  height: 500px;
+  background-position: center;
+  background-blend-mode: multiply;
+  height: 550px;
+  position: relative;
 }
 
 .hero-container {
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   text-align: center;
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  padding: 20px;
+
+  /*centering the container*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .btn {
+  text-align: center;
   background-color: #c59613;
   width: 160px;
   height: 40px;
   color: white;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: #9e7911;
 }
