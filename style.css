@@ -12,8 +12,8 @@ a {
   height: 80px;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 1000;
-  margin-bottom: 20px;
 }
 
 .header-container {
@@ -59,8 +59,10 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;
+  background-attachment: fixed;
   height: 550px;
   position: relative;
+  margin-top: 80px;
 }
 
 .hero-container {
@@ -96,34 +98,30 @@ a {
 }
 
 .more-section {
-  text-align: center;
   width: 1280px;
   padding-top: 70px;
   padding-bottom: 70px;
+  margin: 0 auto;
 }
 
-.paragraph-container {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.more-container {
+  margin: 0 auto 40px;
+  text-align: center;
+  max-width: 750px;
 }
-
-.paragraph-container p {
+.more-container p {
   word-spacing: 3px;
   font-size: 18px;
-  max-width: 750px;
-  margin-bottom: 40px;
 }
 
 .cards-container {
   margin-top: 200px;
-  width: 1950px;
+  width: 1280px;
 }
 
 .card {
   float: left;
-  width: 22%;
+  width: calc(25% - 75px);
   height: auto;
   padding: 15px 15px 25px;
   margin-right: 15px;
@@ -131,6 +129,10 @@ a {
   border-radius: 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0.1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:last-of-type {
+  margin-right: 0;
 }
 
 .card:hover {
