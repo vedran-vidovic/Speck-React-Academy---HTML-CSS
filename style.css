@@ -205,7 +205,6 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  border-top: 2px solid white;
   border-bottom: 2px solid white;
   justify-content: space-around;
 }
@@ -216,6 +215,7 @@ a {
   flex-direction: column;
   margin-top: 15px;
 }
+
 .info-box-time-place p {
   font-size: 15px;
   text-align: center;
@@ -250,11 +250,28 @@ a {
   margin-right: 10px;
 }
 
+.speaker-icon {
+  content: url("./images/speakers-icon.png");
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
 .info-box-header {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid white;
+}
+
+.info-box-header-speakers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
 }
 
 .component-container {
